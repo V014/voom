@@ -115,7 +115,7 @@ function slider(i){
     // chnage slide numnber
     count.innerText = "/0" + (i + 1);
 
-    // remove active calss from all
+    // remove active class from all
     for(let i = 0; i < cntrl.length; i++){
         cntrl[1].classList.remove('active');
         cntrlMob[i].classList.remove('pag-active');
@@ -123,26 +123,26 @@ function slider(i){
     //reset active class to clicked element
     cntrl[i].classList.add('active');
     cntrlMob[i].classList.add('pag-active');
+}
 
-    //slider automation
-    function nextSlide(){
-        // increment img id
-        id++;
-        /*check if id is greater than the number of available slides*/
-        if(id > cntrl.length - 1) {
-            id = 0;
-        }
-        // run the slider function
-        slider(id);
+//slider automation
+function nextSlide(){
+    // increment img id
+    id++;
+    /*check if id is greater than the number of available slides*/
+    if(id > cntrl.length - 1) {
+        id = 0;
     }
+    // run the slider function
+    slider(id);
+}
 
-    //automate slider
-    let autoSlide = setInterval(nextSlide, 10000);
+//automate slider
+let autoSlide = setInterval(nextSlide, 10000);
 
-    //stop automatic slide
-    function stopAutoSlide(){
-        clearInterval(autoSlide);
-        // restat auto slider
-        autoSlide = setInterval(nextSlide, 10000);
-    }
+//stop automatic slide
+function stopAutoSlide(){
+    clearInterval(autoSlide);
+    // restat auto slider
+    autoSlide = setInterval(nextSlide, 10000);
 }
