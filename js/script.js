@@ -3,15 +3,6 @@ const menuBtn = document.querySelectorAll('.menu-btn');
 const menu = document.querySelector('.menu');
 const links = document.querySelectorAll('.menu li');
 
-// slider
-const cntrl = document.querySelectorAll('.slider-cntrl');
-const cntrlMob = document.querySelectorAll('.pagination-mobile > li');
-const title = document.querySelector('.title');
-const subtitle = document.querySelectorAll('.sub-title');
-const img = document.querySelector('.thumbnail');
-const count = document.querySelector('.slider-count');
-const progress = document.querySelector('.progress div');
-
 // Toggle sudebar open/close
 menuBtn.forEach(btn => {
     console.log('in here');
@@ -55,7 +46,14 @@ function sideNavToggle() {
     }
 }
 
-
+// slider
+const cntrl = document.querySelectorAll('.slider-cntrl');
+const cntrlMob = document.querySelectorAll('.pagination-mobile > li');
+const title = document.querySelector('.title');
+const subtitle = document.querySelectorAll('.sub-title');
+const img = document.querySelector('.thumbnail');
+const count = document.querySelector('.slider-count');
+const progress = document.querySelector('.progress div');
 
 let id =0;
 // data
@@ -70,7 +68,7 @@ const images = [
 const progressWidth = [
     '33%',
     '66%',
-    '100%'
+    '100%',
 ];
 
 //Text variations for the slider
@@ -86,6 +84,8 @@ for(let i = 0; i < cntrl.length; i++){
     cntrl[i].addEventListener('click', () => {
         // run the slider function
         slider(i);
+        // set id to clicked pagination index
+        id = i;
         // stop auto slider
         stopAutoSlide();
     });
@@ -106,7 +106,7 @@ function slider(i){
     //progress progression
     progress.style.width = progressWidth[i];
     // change title
-    title.innerText = text[i] + "Collection";
+    title.innerText = text[i] + " Collection";
     // change sub title
     subtitle.forEach(sub => {
         sub.innertext = text[i] + " Collection"
@@ -122,7 +122,7 @@ function slider(i){
     }
     //reset active class to clicked element
     cntrl[i].classList.add('active');
-    cntrlMob[i].ClassList.add('pag-active');
+    cntrlMob[i].classList.add('pag-active');
 
     //slider automation
     function nextSlide(){
@@ -143,6 +143,6 @@ function slider(i){
     function stopAutoSlide(){
         clearInterval(autoSlide);
         // restat auto slider
-        autoSlide = setinterval(nextSlide, 10000);
+        autoSlide = setInterval(nextSlide, 10000);
     }
 }
