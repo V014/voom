@@ -73,9 +73,9 @@ const progressWidth = [
 
 //Text variations for the slider
 const text = [
-    'Work',
-    'Active',
-    'Travel',
+    'Opportunity',
+    'Educational',
+    'Career',
 ];
 
 // pagination controls
@@ -106,10 +106,10 @@ function slider(i){
     //progress progression
     progress.style.width = progressWidth[i];
     // change title
-    title.innerText = text[i] + " Collection";
+    title.innerText = text[i];
     // change sub title
     subtitle.forEach(sub => {
-        sub.innertext = text[i] + " Collection"
+        sub.innerText = text[i];
     });
 
     // chnage slide numnber
@@ -117,7 +117,7 @@ function slider(i){
 
     // remove active class from all
     for(let i = 0; i < cntrl.length; i++){
-        cntrl[1].classList.remove('active');
+        cntrl[i].classList.remove('active');
         cntrlMob[i].classList.remove('pag-active');
     }
     //reset active class to clicked element

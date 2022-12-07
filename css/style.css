@@ -6,7 +6,7 @@
 
 body{
     margin: 0;
-    /* background: #151517; */
+    background: #151517;
     font-family: 'Roboto';
     overflow-x: hidden;
 }
@@ -88,7 +88,7 @@ nav .container .header-body .container{
 }
 
 nav {
-    padding: 5px 20px 10px 20px;
+    padding: 5px 20px 10px 20px; 
 }
 
 .brand{
@@ -97,7 +97,7 @@ nav {
 }
 
 .brand-icon{
-    padding: 3%;
+    padding: 3%; 
 }
 
 nav ul {
@@ -154,7 +154,7 @@ nav ul li {
 
  .social li {
     margin: 1.2em 0;
-    transform: rotate(-90deg);
+    /*transform: rotate(-90deg);*/
  }
 
  /*==== sidebar menu ====*/
@@ -216,7 +216,7 @@ nav ul li {
 }
 
 .slider-cntrl:hover{
-   color: var(--primary) 
+   color: var(--primary); 
 }
 
 .slider-padding{
