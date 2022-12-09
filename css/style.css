@@ -11,7 +11,9 @@ body{
     overflow-x: hidden;
 }
 
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 /*=== Scroll bar ===*/
 ::-webkit-scrollbar{
@@ -59,7 +61,7 @@ header{
     background-image: linear-gradient(90deg, #2c2c2e, #151517);
     min-height: 100vh;
     color: var(--primary);
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
 }
@@ -146,6 +148,12 @@ nav ul li {
     position: relative;
     z-index: 1;
     width: 60px;
+    padding-top: 20px;
+ }
+
+ .aside-btn {
+    width: 21px; 
+    height: 18px;
  }
 
  .social {
