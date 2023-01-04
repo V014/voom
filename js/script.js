@@ -73,9 +73,9 @@ const progressWidth = [
 
 //Text variations for the slider
 const text = [
-    'Opportunity',
-    'Educational',
-    'Career',
+    'Work',
+    'Projects',
+    'Appointments',
 ];
 
 // pagination controls
